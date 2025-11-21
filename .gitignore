@@ -1,0 +1,40 @@
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pym
+
+# -------------------------
+# Environment variables
+# -------------------------
+.env
+
+# -------------------------
+# Node / Frontend (if any)
+# -------------------------
+node_modules/
+dist/
+build/
+
+# -------------------------
+# Database / storage
+# -------------------------
+chroma_db/
+uploads/
+
+# -------------------------
+# IDEs / Editors
+# -------------------------
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# -------------------------
+# OS files
+# -------------------------
+.DS_Store
+Thumbs.db
