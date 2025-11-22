@@ -221,7 +221,7 @@ const Dashboard: React.FC = () => {
                 onKeyPress={handleKeyPress}
                 placeholder={pdfFile ? "Ask a question about your PDF..." : "Upload a PDF first..."}
                 disabled={!pdfFile || isLoading}
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                className="text-black flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
               />
               <button
                 onClick={handleSendQuestion}
