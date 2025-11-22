@@ -3,6 +3,8 @@ from typing import List, Dict
 from pypdf import PdfReader
 
 def extract_pdf_pages(pdf_path: str) -> List[Dict]:
+
+
     """
     Reads a PDF and returns a list of:
     { 'page_num': int, 'text': str, 'source': str }
