@@ -1,5 +1,4 @@
 from rag_retrieval import retrieve_relevant_chunks
-
 from llama_openrouter import answer_query_with_openrouter
 
 def answer_query(query: str) -> str:

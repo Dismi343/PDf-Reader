@@ -1,5 +1,6 @@
 from pdf_utils import extract_pdf_pages
 from chunks_utils import chunk_text
+#from vector_store_chroma import index_chunks
 from vector_store import index_chunks
 
 def ingest_pdf(pdf_path: str):
@@ -8,8 +9,8 @@ def ingest_pdf(pdf_path: str):
     """
     pages = extract_pdf_pages(pdf_path)
     if not pages:
-        print(f"No text extracted from: {pdf_path}")
-        return
+        raise ValueError(f"No text extracted from: {pdf_path}")
+        
 
     chunks = chunk_text(pages)
     if not chunks:
