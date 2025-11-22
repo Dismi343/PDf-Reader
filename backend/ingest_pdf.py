@@ -1,7 +1,8 @@
 from pdf_utils import extract_pdf_pages
 from chunks_utils import chunk_text
-#from vector_store_chroma import index_chunks
-from vector_store import index_chunks
+#from vector_store_chroma import index_chunks    #when uploading to cloud db (chromadb)
+#from vector_store import index_chunks              #local chromadb
+from Mongo_db.vector_store_mongo import index_chunks   #mongo db
 
 def ingest_pdf(pdf_path: str):
     """

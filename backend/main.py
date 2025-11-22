@@ -2,7 +2,7 @@ from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from pathlib import Path
 import shutil
-from vector_store import get_chroma_collection
+from Mongo_db.mongo_client import get_chunks_collection
 
 from ingest_pdf import ingest_pdf
 from rag import answer_query
@@ -52,6 +52,16 @@ async def ask(payload: dict):
 
     answer = answer_query(query)
     return {"answer": answer}
+
+
+@app.delete("/delete-pdf-chunks/{pdf_filename}")
+def delete_pdf_chunks(pdf_filename: str):
+    collection = get_chunks_collection()
+    result = collection.delete_many({"source": pdf_filename})
+    return {
+        "deleted_count": result.deleted_count,
+        "message": f"Deleted {result.deleted_count} chunks for {pdf_filename}",
+    }
 
 
 @app.get("/")

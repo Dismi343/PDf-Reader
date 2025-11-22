@@ -18,7 +18,7 @@ if not OPENROUTER_API_KEY or OPENROUTER_API_KEY == "YOUR_OPENROUTER_API_KEY_HERE
 BASE_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 
-MODEL_ID = "deepseek/deepseek-chat-v3-0324:free"  # replace with your OpenRouter model | openai/gpt-4.1-mini
+MODEL_ID = "google/gemma-3-27b-it:free"  # replace with your OpenRouter model | openai/gpt-4.1-mini
 
 HEADERS = {
     "Authorization": f"Bearer {OPENROUTER_API_KEY}",
