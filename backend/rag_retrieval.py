@@ -1,10 +1,11 @@
 from typing import List, Dict
-from vector_store import get_collection
+from vector_store import get_chroma_collection
 from embedding import embed_texts
+#from vector_store_chroma import get_chroma_collection
 
 def retrieve_relevant_chunks(query: str, top_k: int = 5) -> List[Dict]:
  
-    collection = get_collection()
+    collection = get_chroma_collection()
     query_embedding = embed_texts([query])[0]
 
     results = collection.query(
